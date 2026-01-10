@@ -1,0 +1,32 @@
+#usda 1.0
+(
+    #FalconEditorCompatible
+    defaultPrim = "MechanicGirlMannequin"
+    upAxiz = "Z"
+)
+
+def dtEncapsulation "MechanicGirlMannequin"
+(                 
+)
+{
+    token dtType = "ItemTwin"
+    string dtDescription = ""
+
+    string PythonModule = "MechanicGirlMannequin.MechanicGirlMannequin"
+    string PythonClass = "MechanicGirlMannequin"
+    asset[] PythonPath = [@./@, @../../Twins/@] 
+
+    def dtObjectReference "UAssetWindows"
+    {
+        asset dtAsset = @./Paks/MechanicGirlMannequin_windows_falcon54.pak@
+        string dtScope = "/Game/Props/FbxScene_SK_MechanicGirl_AllPartsTogether.FbxScene_SK_MechanicGirl_AllPartsTogether"
+        string[] dtArchitectures = ["windows", "ue5.5", "falcon5.4"]
+    }
+
+    def dtObjectReference "UAssetLinux"
+    {
+        asset dtAsset = @./Paks/MechanicGirlMannequin_linux_falcon54.pak@
+        string dtScope = "/Game/Props/FbxScene_SK_MechanicGirl_AllPartsTogether.FbxScene_SK_MechanicGirl_AllPartsTogether"
+        string[] dtArchitectures = ["linux", "ue5.5", "falcon5.4"]
+    }
+}
